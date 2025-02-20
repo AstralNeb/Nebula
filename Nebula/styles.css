@@ -1,0 +1,262 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+header {
+    background-color: #2a2a40;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header .logo-circle {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #6c5ce7;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    color: #a5a5a5;
+}
+
+#post-form-section {
+    margin-bottom: 30px;
+}
+
+#post-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    background-color: #2a2a40;
+    color: #ffffff;
+    font-size: 1rem;
+    resize: none;
+}
+
+#post-form button {
+    padding: 10px 20px;
+    background-color: #6c5ce7;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#post-form button:hover {
+    background-color: #5a4fcf;
+}
+
+#posts h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #6c5ce7;
+}
+
+.post {
+    background-color: #2a2a40;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-content {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.post-actions button {
+    padding: 5px 10px;
+    background-color: #444;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.post-actions button.liked {
+    background-color: #6c5ce7;
+}
+
+.post-actions button.disliked {
+    background-color: #ff4757;
+}
+
+.post-actions button:hover {
+    background-color: #6c5ce7;
+}
+
+.comments {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+}
+
+.comment-form {
+    margin-bottom: 15px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    background-color: #3a3a50;
+    color: #ffffff;
+    font-size: 0.9rem;
+    resize: none;
+}
+
+.comment-form button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #6c5ce7;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.comment-form button:hover {
+    background-color: #5a4fcf;
+}
+
+.comment {
+    background-color: #3a3a50;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-content {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.comment-actions button {
+    background: none;
+    border: none;
+    color: #a5a5a5;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.comment-actions button.liked {
+    color: #6c5ce7;
+}
+
+.comment-actions button.disliked {
+    color: #ff4757;
+}
+
+.comment-actions button:hover {
+    color: #6c5ce7;
+}
+
+footer {
+    background-color: #2a2a40;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 2px solid #444;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #a5a5a5;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    #post-form textarea {
+        height: 80px;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    .post-content {
+        font-size: 1rem;
+    }
+
+    .post-actions button {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+    }
+}
